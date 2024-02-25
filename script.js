@@ -22,17 +22,6 @@ function divideNum(num1, num2) {
   return sum;
 }
 
-// let addition = addNum(firstNumber, secondNumber);
-// console.log(addition);
-// let subtraction = subtractNum(firstNumber, secondNumber);
-// console.log(subtraction);
-// let multiply = multiplyNum(firstNumber, secondNumber);
-// console.log(multiply);
-// let division = divideNum(firstNumber, secondNumber);
-// console.log(division);
-
-
-
 function operate(firstNumber, secondNumber, operator) {
   if (operator === "+") {
     addNum(firstNumber, secondNumber);
