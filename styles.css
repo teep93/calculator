@@ -1,0 +1,11 @@
+.display-container {
+    display: flex;
+    height: 40px;
+    width: 300px;
+    border: 1px solid black;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: x-large;
+}
+
+.display
