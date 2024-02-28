@@ -1,6 +1,8 @@
-let firstNumber = 10;
-let secondNumber = 15;
+let firstNumber = 0;
+let secondNumber = 0;
 let operator = "";
+let displayValue1 = ''
+let displayValue2 = '';
 
 function addNum(num1, num2) {
   let sum = num1 + num2;
@@ -43,6 +45,38 @@ function operate(firstNumber, secondNumber, operator) {
   }
 }
 
+function displayNumberClick() {
+    const displayContainer = document.querySelector('.display');
+    document.querySelectorAll('.number-button').forEach((item) => {
+        item.addEventListener('click', (e) => {
+            let content = displayContainer.textContent;
+            if (content === "/" || content === 'x' || content === "+" || content === "-") {
+                displayContainer.innerHTML = '';
+            }
+            displayContainer.innerHTML += e.target.textContent.trim();
+            
+            
+
+        })
+    })
+}
+
+function displayOperatorClick() {
+    const displayContainer = document.querySelector('.display');
+    document.querySelectorAll('.operator-button').forEach((item) => {
+        item.addEventListener('click', (e) => {
+            displayContainer.innerHTML = '';
+            displayContainer.innerHTML = e.target.textContent.trim();
+
+        })
+    })
+}
+
+
+displayNumberClick();
+displayOperatorClick();
 
 let operation = operate(firstNumber, secondNumber, "*");
 console.log(operation);
+
+
