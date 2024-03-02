@@ -1,5 +1,4 @@
 let firstNumber = null
-let newFirstNumber = null
 let secondNumber = null
 var operator = ""
 var operateResult = '' 
@@ -40,6 +39,8 @@ function operate(num1, num2, oper) {
 const numberBtns = document.querySelectorAll(".number-button");
 const operatorBtns = document.querySelectorAll(".operator-button");
 const equalsBtn = document.querySelector(".equals-button");
+const clearBtn = document.querySelector(".clear-button");
+const deleteBtn = document.querySelector(".delete-button")
 let displayContainer = document.querySelector(".display");
 
 numberBtns.forEach(numberBtn => {
@@ -67,6 +68,13 @@ console.log(firstNumber, secondNumber, operator);
 operate(+firstNumber, +secondNumber, operator);
 displayContainer.textContent = operateResult;  
 console.log(operateResult);  
+})
+
+clearBtn.addEventListener("click", (e) => {
+  firstNumber = null;
+  secondNumber = null;
+  operator = ''
+  displayContainer.textContent = ''
 })
 
 
