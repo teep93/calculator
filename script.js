@@ -2,6 +2,7 @@ let firstNumber = null
 let newFirstNumber = null
 let secondNumber = null
 var operator = ""
+var operateResult = '' 
 
 
 function addNum(num1, num2) {
@@ -24,23 +25,15 @@ function divideNum(num1, num2) {
   return sum;
 }
 
-function operate(firstNumber, secondNumber, operator) {
-  if (operator === "+") {
-    addNum(firstNumber, secondNumber);
-    let addition = addNum(firstNumber, secondNumber);
-    return addition;
-  } else if (operator === "-") {
-    subtractNum(firstNumber, secondNumber);
-    let subtraction = subtractNum(firstNumber, secondNumber);
-    return subtraction;
-  } else if (operator === "*") {
-    multiplyNum(firstNumber, secondNumber);
-    let multiply = multiplyNum(firstNumber, secondNumber);
-    return multiply;
-  } else if (operator === "/") {
-    divideNum(firstNumber, secondNumber);
-    let division = divideNum(firstNumber, secondNumber);
-    return division;
+function operate(num1, num2, oper) {
+  if (oper === "+") {
+    operateResult = addNum(num1, num2);
+  } else if (oper === "-") {
+    operateResult = subtractNum(num1, num2)      
+  } else if (oper === "*") {
+    operateResult = multiplyNum(num1, num2)
+  } else if (oper === "/") {
+    operateResult = divideNum(num1, num2)
   }
 }
 
@@ -59,9 +52,6 @@ numberBtns.forEach(numberBtn => {
 
 operatorBtns.forEach(operatorBtn => {
   operatorBtn.addEventListener("click", (e) => {
-    if (firstNumber = true) {
-      firstNumber = newFirstNumber
-    }
     firstNumber = displayContainer.innerHTML;
     displayContainer.innerHTML = e.target.textContent;
     operator = displayContainer.innerHTML;
@@ -73,8 +63,10 @@ operatorBtns.forEach(operatorBtn => {
 equalsBtn.addEventListener("click", (e) => {
 selectEquals()
 secondNumber = displayContainer.innerHTML;
-displayContainer.innerHTML = e.target.textContent;
-console.log(firstNumber, secondNumber);
+console.log(firstNumber, secondNumber, operator);
+operate(+firstNumber, +secondNumber, operator);
+displayContainer.textContent = operateResult;  
+console.log(operateResult);  
 })
 
 
@@ -91,12 +83,12 @@ function selectOperator() {
 
 function selectEquals() {
   let operate = displayContainer.textContent;
-  if (operate === "=" && firstNumber != null) {
+  if (operate === "=") {
     displayContainer.innerHTML = ''
     secondNumber = displayContainer.innerHTML;
-    console.log(firstNumber, secondNumber, newFirstNumber);
+    console.log(firstNumber, secondNumber, operator);
   }
-  
+
 }
 
 // function
