@@ -1,7 +1,7 @@
 let firstNumber = null
 let newFirstNumber = null
 let secondNumber = null
-
+var operator = ""
 
 
 function addNum(num1, num2) {
@@ -49,13 +49,6 @@ const operatorBtns = document.querySelectorAll(".operator-button");
 const equalsBtn = document.querySelector(".equals-button");
 let displayContainer = document.querySelector(".display");
 
-const add = "+";
-const subtract = "-";
-const divide = "/";
-const multiply = "x";
-const equals = "=";
-
-
 numberBtns.forEach(numberBtn => {
   numberBtn.addEventListener("click", (e) => {
     selectOperator();
@@ -71,7 +64,8 @@ operatorBtns.forEach(operatorBtn => {
     }
     firstNumber = displayContainer.innerHTML;
     displayContainer.innerHTML = e.target.textContent;
-    console.log(firstNumber, secondNumber);
+    operator = displayContainer.innerHTML;
+    console.log(firstNumber, secondNumber, operator);
     })
 })
 
@@ -85,12 +79,12 @@ console.log(firstNumber, secondNumber);
 
 
 function selectOperator() {
-  let operator = displayContainer.textContent;
+  let operation = displayContainer.textContent;
   if (
-    operator === "/" ||
-    operator === "x" ||
-    operator === "+" ||
-    operator === "-") {
+    operation === "/" ||
+    operation === "x" ||
+    operation === "+" ||
+    operation === "-") {
     displayContainer.innerHTML = '';
   }
 }
@@ -100,7 +94,9 @@ function selectEquals() {
   if (operate === "=" && firstNumber != null) {
     displayContainer.innerHTML = ''
     secondNumber = displayContainer.innerHTML;
+    console.log(firstNumber, secondNumber, newFirstNumber);
   }
+  
 }
 
 // function
