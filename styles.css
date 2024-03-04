@@ -1,5 +1,7 @@
 * {
     margin: 0px;
+    font-family: roboto;
+    color: white;
 }
 
 .wrapper * {
@@ -13,24 +15,6 @@
     padding: 0px;
 }
 
-.header {
-    margin: 0px;
-    padding: 0px;
-    height: 100vh;
-    background-color: paleturquoise;
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    width: 100%;
-    font-size: x-large;
-    align-items: center;
-
-}
-
-.text {
-    margin-top: 30px;
-    
-}
 
 
 .wrapper {
@@ -39,7 +23,7 @@
     justify-content: center;
     background-color: paleturquoise;
     height: 100vh;
-    align-items: center;
+    align-items:flex-start;
 }
 
 .calc-container {
@@ -143,6 +127,7 @@
 .delete-button, .decimal-button {
     background-color:red;
     border-radius: 30%;
+    color: black
 }
 .delete-button, .decimal-button, .zero-button {
     width: 33.3333%;
