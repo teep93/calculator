@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     font-family: roboto;
-    color: white;
+    
 }
 
 .wrapper * {
@@ -52,6 +52,10 @@
     
 }
 
+.display {
+    font-color: black
+}
+
 .button-wrapper {
     margin-top: 50px;
     width: 100%;
@@ -86,6 +90,7 @@
     height: 50px;
     background-color: blueviolet;
     border-radius: 10%;
+    color: white;
 }
 
 .operator-container {
@@ -100,6 +105,7 @@
     height: 50px;
     background-color:deepskyblue;
     border-radius: 30%;
+    color: white;
 }
     
 
@@ -117,6 +123,7 @@
     height: 50px;
     background-color:deepskyblue;
     border-radius: 10px;
+    color: white;
 }
 
 .clear-button {
