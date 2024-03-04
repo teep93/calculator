@@ -29,7 +29,7 @@ function operate(num1, num2, oper) {
     operateResult = addNum(num1, num2);
   } else if (oper === "-") {
     operateResult = subtractNum(num1, num2)      
-  } else if (oper === "*") {
+  } else if (oper === "x") {
     operateResult = multiplyNum(num1, num2)
   } else if (oper === "/") {
     operateResult = divideNum(num1, num2)
@@ -99,5 +99,15 @@ function selectEquals() {
 
 }
 
-// function
+// ui code
+
+// const height = 500
+// const width = 400
+
+// let numbBtns = document.querySelectorAll("number-button");
+// numbBtns.forEach((numbBtn) => () {
+//   numbBtn.style.width =
+  
+// }
+
   

@@ -1,3 +1,60 @@
+* {
+    margin: 0px;
+}
+
+.wrapper * {
+    font-size: large;
+}
+
+.body  {
+    height: 100vh;
+   
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: paleturquoise;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    font-size: x-large;
+    align-items: center;
+
+}
+
+.text {
+    margin-top: 30px;
+    
+}
+
+
+.wrapper {
+    
+    display: flex;
+    justify-content: center;
+    background-color: paleturquoise;
+    height: 100vh;
+    align-items: center;
+}
+
+.calc-container {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    background-color: pink;
+    border-radius: 10px;
+    
+}
+
 .display-container {
     display: flex;
     height: 40px;
@@ -6,5 +63,90 @@
     justify-content: flex-end;
     align-items: flex-end;
     font-size: x-large;
+    margin-top: 50px;
+    background-color: white;;
+    
+}
+
+.button-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    flex-wrap: wrap;
+}
+
+
+.clearing {
+    display:flex;
+
+}
+
+
+
+.number-container {
+    
+    display:flex;
+    flex-direction: row-reverse;    
+    justify-content: flex-end;
+    
+    width: 300px;
+    flex-wrap: wrap-reverse;
+}
+
+.number-button {
+    width: 100px;
+    height: 50px;
+    background-color: blueviolet;
+    border-radius: 10%;
+}
+
+.operator-container {
+    
+    display:flex;
+    width: 300px;
+
+}
+
+.operator-button {
+    width: 100px;
+    height: 50px;
+    background-color:deepskyblue;
+    border-radius: 30%;
+}
+    
+
+.equals-container {
+    
+    display:flex;
+        
+    justify-content: center;
+    
+    width: 300px;
+}
+
+.equals-button {
+    width: 100%;
+    height: 50px;
+    background-color:deepskyblue;
+    border-radius: 10px;
+}
+
+.clear-button {
+    width: 300px;
+    background-color:deepskyblue;
+    border-radius: 10px;
+}
+.delete-button, .decimal-button {
+    background-color:red;
+    border-radius: 30%;
+}
+.delete-button, .decimal-button, .zero-button {
+    width: 33.3333%;
+    height: 50px;
+    border-radius: 30%;
 }
 
